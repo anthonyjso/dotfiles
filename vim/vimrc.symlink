@@ -1,4 +1,43 @@
+" Remap leader
+let mapleader = ","
+
+" Pathogen load
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+filetype off
+
+call pathogen#infect()
+call pathogen#helptags()
+
+filetype plugin indent on
 syntax on
 
-" Wrap gitcommit file types at the appropriate length
-filetype indent plugin on
+" ctrlp
+"
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(pyc)$',
+  \ }
+
+let g:ctrlp_match_window = 'top'
+
+" Enable the mouse
+set mouse=a
+
+" Map NERDTreeToggle to act like ST
+map <C-k><C-b> :NERDTreeToggle<CR>
+
+colors Tomorrow-Night-Eighties
+
+" Expand tab
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set list listchars=tab:→\ ,trail:·
+
+" Ruler set to 120
+if exists('+colorcolumn')
+  set colorcolumn=120
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>120v.\+', -1)
+endif
+
