@@ -15,7 +15,7 @@ fi
 # Install homebrew packages
 # At this time, these are focused on Python development, an attempt to get through the SICP book, and octopress
 brew install autoconf git pcre texinfo automake gnu-sed pkg-config the_silver_searcher bash-completion libevent python
-tmux cmake macvim rbenv unrar cscope maven readline watchman ctags mit-scheme ruby-build wget gdbm openssl sqlite xz
+tmux cmake macvim rbenv unrar cscope maven readline watchman ctags mit-scheme ruby-build wget gdbm openssl sqlite xz grc
 
 exit 0
 
